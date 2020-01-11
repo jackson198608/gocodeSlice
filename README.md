@@ -1,0 +1,2 @@
+# gocodeSlice
+for programming usage
