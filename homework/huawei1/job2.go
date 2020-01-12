@@ -1,4 +1,4 @@
-package main
+package huawei1
 
 import (
 	"fmt"
