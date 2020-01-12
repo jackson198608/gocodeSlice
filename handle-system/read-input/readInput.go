@@ -11,11 +11,12 @@ const systemargslen = 3
 
 func main() {
 	getInputFromCommandLine()
-	getInputFromInteractive()
+	getInputFromInteractiveUsBufio()
+	getInputUsFmtScan()
 
 }
 
-func getInputFromInteractive() {
+func getInputFromInteractiveUsBufio() {
 
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Println("Simple Shell")
@@ -48,4 +49,17 @@ func getInputFromCommandLine() {
 	third := os.Args[2]
 	fmt.Println("args: ", first, " ", second, " ", third)
 
+}
+
+func getInputUsFmtScan() {
+	for {
+		var i int
+		fmt.Scanf("%d", &i)
+		if i != 0 {
+			fmt.Println(i)
+		} else {
+			fmt.Println("bye")
+			return
+		}
+	}
 }
